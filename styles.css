@@ -1,0 +1,241 @@
+:root {
+  --Neutral-0: hsl(0, 0%, 100%);
+  --Neutral-300: hsl(252, 6%, 83%);
+  --Neutral-500: hsl(245, 15%, 58%);
+  --Neutral-700: hsl(245, 19%, 35%);
+  --Neutral-900: hsl(248, 70%, 10%);
+  --Orange-500: hsl(7, 88%, 67%);
+  --Orange-700: hsl(7, 71%, 60%);
+  --Gradient: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
+  --Font-size-labels-: 20px;
+  --Mobile: 375px;
+  --Desktop: 1440px;
+}
+@font-face {
+  font-family: "inconsolata";
+  src: url(assets/fonts/static/Inconsolata-Bold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("assets/images/background-desktop.png"),
+    url("assets/images/pattern-lines.svg"),
+    url("assets/images/pattern-squiggly-line-top.svg"),
+    url("assets/images/pattern-squiggly-line-bottom.svg");
+  background-size: cover, cover, 10rem, 20rem;
+  background-position: center, center, top right, bottom left;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  font-family: "inconsolata";
+  height: 100vh;
+  color: var(--Neutral-0);
+}
+.final {
+  display: none;
+}
+.logo-container {
+  display: grid;
+  place-content: center;
+  position: relative;
+  top: 1rem;
+}
+form {
+  position: absolute;
+  top: 30%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  height: 20rem;
+  place-items: center;
+}
+header {
+  display: grid;
+  justify-content: center;
+}
+header h2 {
+  width: 20rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+header p {
+  text-align: center;
+  font-size: 0.7rem;
+  margin-top: 1rem;
+  color: var(--Neutral-500);
+}
+.upload-container {
+  margin-top: 1rem;
+}
+.upload-btn-container {
+  background-color: hsla(245, 15%, 58%, 0.2);
+  border: 2px dashed var(--Neutral-500);
+  place-items: center;
+  border-radius: 10px;
+  padding: 0.5rem;
+  width: 20rem;
+}
+.upload-container h3 {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+/* .image-upload {
+  display: none;
+} */
+.image-upload-btn {
+  background-color: hsla(245, 15%, 58%, 0.2);
+  border: none;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+.inputs-container {
+  display: grid;
+}
+.inputs-container input {
+  width: 20rem;
+  height: 2.5rem;
+  margin: 10px 0 20px 0;
+  border: 1px solid var(--Neutral-500);
+  border-radius: 10px;
+  color: var(--Neutral-0);
+  background-color: hsla(245, 15%, 58%, 0.2);
+}
+.inputs-container input::placeholder {
+  color: var(--Neutral-0);
+}
+.btn-generate {
+  width: 20rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--Orange-700);
+  font-weight: 600;
+}
+.info {
+  display: grid;
+  grid-template-columns: 1.5rem auto;
+  align-items: center;
+}
+.info p {
+  display: inline-block;
+  font-size: 0.7rem;
+  color: hsl(245, 15%, 58%);
+}
+@media screen and (min-width: 1440px) {
+  body {
+    background-image: url("assets/images/background-desktop.png"),
+      url("assets/images/pattern-lines.svg"),
+      url("assets/images/pattern-squiggly-line-top.svg"),
+      url("assets/images/pattern-squiggly-line-bottom.svg");
+    background-size: cover, cover, 25rem, 35rem;
+    background-position: center, center, top right, bottom left;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    font-family: "inconsolata";
+    height: 100vh;
+    color: var(--Neutral-0);
+  }
+  .logo-container {
+    display: grid;
+    place-content: center;
+    position: relative;
+    top: 1rem;
+  }
+  form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    height: 40rem;
+    place-items: center;
+    margin-top: 1rem;
+  }
+  header {
+    display: grid;
+    justify-content: center;
+  }
+  header h2 {
+    width: 50rem;
+    font-size: 2.6rem;
+    text-align: center;
+  }
+  header p {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: var(--Neutral-500);
+  }
+  .upload-container {
+    margin-top: 1rem;
+  }
+  .upload-container h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .upload-btn-container {
+    background-color: hsla(245, 15%, 58%, 0.2);
+    border: 2px dashed var(--Neutral-500);
+    place-items: center;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 30rem;
+    color: hsl(245, 15%, 58%);
+  }
+  .image-upload-btn {
+    background-color: hsla(245, 15%, 58%, 0.2);
+    border: none;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+  }
+  .info {
+    margin-top: 0.5rem;
+    display: grid;
+    grid-template-columns: 1.5rem auto;
+    align-items: center;
+  }
+  .info p {
+    display: inline-block;
+    color: hsl(245, 15%, 58%);
+  }
+  /* .image-upload {
+    display: none;
+  } */
+  .inputs-container {
+    margin-top: 10px;
+    display: grid;
+  }
+  .inputs-container input {
+    width: 30rem;
+    height: 2.5rem;
+    margin: 10px 0 20px 0;
+    border: 1px solid var(--Neutral-500);
+    border-radius: 10px;
+    color: var(--Neutral-0);
+    background-color: hsla(245, 15%, 58%, 0.2);
+  }
+  .inputs-container input::placeholder {
+    color: var(--Neutral-0);
+  }
+  .btn-generate {
+    width: 30rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--Orange-700);
+    font-weight: 600;
+  }
+  .image-prev {
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid;
+  }
+  .imagepreview {
+    width: 100%;
+    height: auto;
+  }
+}
