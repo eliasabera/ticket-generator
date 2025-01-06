@@ -19,7 +19,7 @@
       <img src="assets/images/logo-full.svg" alt="" />
     </div>
     <!-- Form starts -->
-    <form>
+    <form class="form">
       <header>
         <h2>Your Journey to Coding Conf 2025 Starts Here!</h2>
         <p>Secure your spot at next year's biggest coding conference.</p>
@@ -28,12 +28,16 @@
         <h3>Upload Avatar</h3>
         <div class="upload-btn-container">
           <input type="file" class="image-upload" id="imageinput" />
-          <div class="image-prev">
+          <div class="image-container">
             <img class="imagepreview" alt="" />
           </div>
           <button class="image-upload-btn">
             <img src="assets/images/icon-upload.svg" alt="" />
           </button>
+          <div class="button-container">
+            <button class="removeImage btn">remove image</button>
+            <button class="changeImage btn">change image</button>
+          </div>
           <p class="text">Drag and drop or click to upload</p>
         </div>
         <div class="info">
@@ -55,11 +59,43 @@
     <!-- Generated tickets starts -->
 
     <div class="final">
-      Congrats,
-      <!-- Full Name -->! Your ticket is ready. We've emailed your ticket to
-      <!-- Email Address -->
-      and will send updates in the run up to the event. Coding Conf Jan 31, 2025
-      / Austin, TX
+      <div class="congrats">
+        <h2>
+          Congrats,
+          <span class="displayName">Jonatan Kirstof</span>! <br />
+          Your ticket is ready.
+        </h2>
+      </div>
+      <div class="emailUpdate">
+        <p>
+          We've emailed your ticket to <br />
+          <span>email</span>
+          and will send updates in <br />
+          the run up to the event.
+        </p>
+      </div>
+      <div class="ticket">
+        <div class="ticket-first">
+          <div class="ticket-logo">
+            <img src="assets/images/logo-mark.svg" alt="" />
+          </div>
+          <div class="ticket-logo-text">
+            <h3>Coding Conf</h3>
+            <p>Jan 31, 2025 / Austin, TX</p>
+          </div>
+        </div>
+        <div class="ticket-second">
+           <div class="ticket-first">
+          <div class="ticket-logo">
+            <img src="assets/images/image-avatar.jpg" alt="" />
+          </div>
+          <div class="ticket-logo-text second">
+            <h3>Coding Conf</h3>
+            <img src="assets/images/icon-github.svg" alt=""><p>123456@gmail.com</p>
+          </div>
+        </div>
+        </div>
+      </div>
 
       <!-- Generated tickets ends -->
 

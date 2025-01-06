@@ -33,8 +33,9 @@ body {
   height: 100vh;
   color: var(--Neutral-0);
 }
-.final {
-  display: none;
+
+.show {
+  display: block;
 }
 .logo-container {
   display: grid;
@@ -81,9 +82,17 @@ header p {
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
 }
-/* .image-upload {
+.image-container {
+  width: 4rem;
+  height: 3rem;
+  border: 1px solid;
   display: none;
-} */
+}
+.imagepreview {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
 .image-upload-btn {
   background-color: hsla(245, 15%, 58%, 0.2);
   border: none;
@@ -93,6 +102,9 @@ header p {
 }
 .inputs-container {
   display: grid;
+}
+.image-upload {
+  display: none;
 }
 .inputs-container input {
   width: 20rem;
@@ -124,6 +136,18 @@ header p {
   font-size: 0.7rem;
   color: hsl(245, 15%, 58%);
 }
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  display: none;
+  margin-left: 2rem;
+  background: transparent;
+  color: var(--Neutral-0);
+  text-transform: capitalize;
+}
 @media screen and (min-width: 1440px) {
   body {
     background-image: url("assets/images/background-desktop.png"),
@@ -143,6 +167,16 @@ header p {
     place-content: center;
     position: relative;
     top: 1rem;
+  }
+  .final {
+    display: none;
+    width: 50rem;
+    height: 30rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    place-items: center;
   }
   form {
     position: absolute;
@@ -181,11 +215,12 @@ header p {
     border: 2px dashed var(--Neutral-500);
     place-items: center;
     border-radius: 10px;
-    padding: 1.5rem;
+    padding: 0.6rem;
     width: 30rem;
     color: hsl(245, 15%, 58%);
   }
   .image-upload-btn {
+    margin-top: 0.5rem;
     background-color: hsla(245, 15%, 58%, 0.2);
     border: none;
     padding: 5px 10px 5px 10px;
@@ -202,9 +237,9 @@ header p {
     display: inline-block;
     color: hsl(245, 15%, 58%);
   }
-  /* .image-upload {
+  .image-upload {
     display: none;
-  } */
+  }
   .inputs-container {
     margin-top: 10px;
     display: grid;
@@ -220,6 +255,7 @@ header p {
   }
   .inputs-container input::placeholder {
     color: var(--Neutral-0);
+    opacity: 0.5;
   }
   .btn-generate {
     width: 30rem;
@@ -229,13 +265,82 @@ header p {
     background-color: var(--Orange-700);
     font-weight: 600;
   }
-  .image-prev {
-    width: 10rem;
-    height: 10rem;
+  .image-container {
+    width: 5rem;
+    height: 4rem;
     border: 1px solid;
+    display: none;
+    border-radius: 15px;
   }
   .imagepreview {
     width: 100%;
-    height: auto;
+    height: 100%;
+    border-radius: 15px;
+  }
+  .button-container {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .btn {
+    display: none;
+    border: none;
+    margin-left: 0.5rem;
+    background-color: var(--Neutral-700);
+    color: var(--Neutral-300);
+    text-transform: capitalize;
+    padding: 3px 8px 3px 8px;
+    border-radius: 5px;
+  }
+  .removeImage {
+    text-decoration: underline;
+  }
+  .congrats {
+    text-align: center;
+  }
+  .congrats h2 {
+    font-size: 3rem;
+  }
+  .emailUpdate {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .ticket {
+    background-image: url("assets/images/pattern-ticket.svg");
+    background-repeat: no-repeat;
+    background-size: 30rem;
+    width: 30rem;
+    height: 15rem;
+  }
+  .displayName {
+    background: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .ticket-first {
+    width: 100%;
+    display: flex;
+  }
+  .ticket-logo,
+  .ticket-logo-text {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    display: inline;
+  }
+  .ticket-logo img {
+    width: 2rem;
+    height: 2rem;
+  }
+  .ticket-logo-text p {
+    margin-top: 0.5rem;
+    color: var(--Neutral-500);
+  }
+  .ticket-second {
+    margin-top: 3rem;
+  }
+  .second p {
+    display: inline;
   }
 }
